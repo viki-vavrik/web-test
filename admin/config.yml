@@ -1,0 +1,26 @@
+backend:
+  name: github
+  repo: tvoje-uzivatelske-jmeno/jmeno-repozitare
+  branch: main  # nebo master podle toho, co máš
+
+media_folder: "assets/uploads" # kam se ukládají obrázky
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "index.html"
+        label: "Homepage"
+        name: "homepage"
+      - file: "o-nas.html"
+        label: "O nás"
+        name: "onas"
+  - name: "news"
+    label: "Novinky"
+    folder: "_news"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Titulek", name: "title", widget: "string"}
+      - {label: "Obsah", name: "body", widget: "markdown"}
