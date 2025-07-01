@@ -1,10 +1,10 @@
 backend:
   name: github
-  repo: tvoje-uzivatelske-jmeno/jmeno-repozitare
+  repo: viki-vavrik/web-test
   branch: main  # nebo master podle toho, co máš
 
-media_folder: "assets/uploads" # kam se ukládají obrázky
-public_folder: "/assets/uploads"
+media_folder: "images" # kam se ukládají obrázky
+public_folder: "/images"
 
 collections:
   - name: "pages"
@@ -13,7 +13,7 @@ collections:
       - file: "index.html"
         label: "Homepage"
         name: "homepage"
-      - file: "o-nas.html"
+      - file: "about.html"
         label: "O nás"
         name: "onas"
   - name: "news"
