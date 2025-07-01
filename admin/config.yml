@@ -1,9 +1,9 @@
 backend:
   name: github
   repo: viki-vavrik/web-test
-  branch: main  # nebo master podle toho, co máš
+  branch: main
 
-media_folder: "images" # kam se ukládají obrázky
+media_folder: "images"
 public_folder: "/images"
 
 collections:
@@ -13,14 +13,20 @@ collections:
       - file: "index.html"
         label: "Homepage"
         name: "homepage"
+        fields:
+          - { label: "Obsah stránky", name: "body", widget: "markdown" }
+
       - file: "about.html"
         label: "O nás"
         name: "onas"
+        fields:
+          - { label: "Obsah stránky", name: "body", widget: "markdown" }
+
   - name: "news"
     label: "Novinky"
     folder: "_news"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Titulek", name: "title", widget: "string"}
-      - {label: "Obsah", name: "body", widget: "markdown"}
+      - { label: "Titulek", name: "title", widget: "string" }
+      - { label: "Obsah", name: "body", widget: "markdown" }
