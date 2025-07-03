@@ -62,11 +62,25 @@ nav a:hover {
     color: white;
     text-align: center;
     text-shadow: 5px 5px 10px black;
-    font-size: 64px;
-    font-weight: bold;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 1s ease-out, transform 1s ease-out;
+    padding: 0 20px;
+}
+
+.hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #font-size: 32px;
+    gap: 10px;
+    #max-width: 800px;
+}
+
+.hero h1 {
+    font-family: 'Onest', sans-serif;
+    font-size: 89px;
+    #margin: 0;
 }
 
 .container {
@@ -266,7 +280,13 @@ h1 {
 
 
 
-    <div class="hero"><h1>„Každé město potřebuje svůj Placek!“</h1></div>
+    <div class="hero">
+        <div class="hero-text">
+            <h1>„Každé město potřebuje svůj Placek!“</h1>
+            <p class="monofont">Nový komunitní, volnočasový a angažovaný prostor v Ostravě!</p>
+            <p class="monofont">Podpoř nás na <a href="https://donio.cz/placekostrava" style="color:white; text-decoration:none">donio.cz</a></p>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2025 PlacOva z. s. <a href="http://www.wtfpl.net/"><img
