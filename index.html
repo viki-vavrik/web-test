@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono&family=Onest:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>PLACEK Ostrava</title>
     <style>
         body {
@@ -146,6 +148,17 @@ footer {
 .social-icons a:hover {
   color: #f4a261;
 }
+h1 {
+    font-family: 'Onest', sans-serif;
+    font-size: ;
+}
+.monofont{
+    font-family: 'Azeret Mono', monospace;
+}
+.onestfont{
+    font-family: 'Onest', sans-serif;
+}
+
 
 
     </style>
@@ -162,26 +175,27 @@ footer {
 
     <div style="display: flex; flex-direction: column; align-items: flex-end; flex-grow: 1;">
         <div class="social-icons" style="display: flex; gap: 15px; margin-bottom: 5px;">
-            <a href="mailto:ostravskyplacek@gmail.com" title="E-mail">&#9993;</a>
-            <a href="https://instagram.com/placek_ostrava" title="Instagram" target="_blank">IG</a>
-            <a href="https://youtube.com/placek-ostrava" title="YouTube" target="_blank">YT</a>
-            <a href="https://www.facebook.com/profile.php?id=61574674575089" title="Facebook" target="_blank">FB</a>
+            <a href="mailto:ostravskyplacek@gmail.com" title="E-mail"><i class="fas fa-envelope"></i></a>
+            <a href="https://instagram.com/placek_ostrava" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/placek-ostrava" title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://tiktok.com/@placek_ova" title="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61574674575089" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
         </div>
         <nav>
-            <a href="aktuality.html">Aktuality</a>
-            <a href="kalendar.html">Kalendář akcí</a>
-            <a href="o-nas.html">O nás</a>
-            <a href="kontakty.html">Kontakty</a>
-            <a href="https://donio.cz/placekostrava" target="_blank">Darujte</a>
+            <a class="onestfont" href="aktuality.html">Aktuality</a>
+            <a class="onestfont" href="kalendar.html">Kalendář akcí</a>
+            <a class="onestfont" href="o-nas.html">O nás</a>
+            <a class="onestfont" href="kontakty.html">Kontakty</a>
+            <a class="onestfont" href="https://donio.cz/placekostrava" target="_blank">Darujte</a>
         </nav>
     </div>
     </header>
 
 
-    <div class="hero">„Každé město potřebuje svůj Placek!“</div>
+    <div class="hero"><h1>„Každé město potřebuje svůj Placek!“</h1></div>
 
     <footer>
-        <p>&copy; 2025 PlacOva z. s. <a href="http://www.wtfpl.net/"><img
+        <p class="monofont">&copy; 2025 PlacOva z. s. <a href="http://www.wtfpl.net/"><img
        src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
        width="80" height="15" alt="WTFPL" /></a> | Tel: +420 712 345 678 | Email: ostravskyplacek@gmail.com <br>
         This site is hosted on Github Pages.</p>
