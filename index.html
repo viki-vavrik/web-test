@@ -11,7 +11,7 @@
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: black;
 }
 
 header {
@@ -27,11 +27,6 @@ header {
     left: 0;
     z-index: 1000;
     box-sizing: border-box; /* Added to ensure padding doesn't cause overflow */
-}
-
-.logo {
-    font-size: 32px;
-    font-weight: bold;
 }
 
 nav {
@@ -90,58 +85,22 @@ nav a:hover {
     transform: translateY(0) !important;
 }
 
-.contact-form {
-    max-width: 600px;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-}
-
-.contact-form h2 {
-    text-align: center;
-}
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.contact-form button {
-    width: 100%;
-    padding: 10px;
-    background: #333;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.contact-form button:hover {
-    background: #555;
-}
-
 footer {
-    background: #333;
+    background: black;
     color: white;
     text-align: center;
     padding: 15px;
     margin-top: 20px;
 }
 .logo {
-    height:32px;
+    height:48px;
     width: auto;
 }
 .social-icons a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 25px;
   transition: color 0.3s ease;
 }
 
@@ -158,6 +117,28 @@ h1 {
 .onestfont{
     font-family: 'Onest', sans-serif;
 }
+.right-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 36px;
+    padding: 0 10px;
+  }
+}
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+}
+
 
 
 
@@ -173,14 +154,7 @@ h1 {
     <header>
     <a href="index.html"><img class="logo" src="img/logo-white.svg"></a>
 
-    <div style="display: flex; flex-direction: column; align-items: flex-end; flex-grow: 1;">
-        <div class="social-icons" style="display: flex; gap: 15px; margin-bottom: 5px;">
-            <a href="mailto:ostravskyplacek@gmail.com" title="E-mail"><i class="fas fa-envelope"></i></a>
-            <a href="https://instagram.com/placek_ostrava" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://youtube.com/placek-ostrava" title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
-            <a href="https://tiktok.com/@placek_ova" title="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
-            <a href="https://www.facebook.com/profile.php?id=61574674575089" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
-        </div>
+    <div class="right-header">
         <nav>
             <a class="onestfont" href="aktuality.html">Aktuality</a>
             <a class="onestfont" href="kalendar.html">Kalendář akcí</a>
@@ -188,8 +162,16 @@ h1 {
             <a class="onestfont" href="kontakty.html">Kontakty</a>
             <a class="onestfont" href="https://donio.cz/placekostrava" target="_blank">Darujte</a>
         </nav>
+        <div class="social-icons">
+            <a href="mailto:ostravskyplacek@gmail.com" title="E-mail"><i class="fas fa-envelope"></i></a>
+            <a href="https://instagram.com/placek_ostrava" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/@placek-ostrava" title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://tiktok.com/@placek_ova" title="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61574674575089" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
     </div>
     </header>
+
 
 
     <div class="hero"><h1>„Každé město potřebuje svůj Placek!“</h1></div>
@@ -198,7 +180,7 @@ h1 {
         <p>&copy; 2025 PlacOva z. s. <a href="http://www.wtfpl.net/"><img
        src="http://www.wtfpl.net/wp-content/uploads/2012/12/wtfpl-badge-4.png"
        width="80" height="15" alt="WTFPL" /></a> | Tel: +420 712 345 678 | Email: ostravskyplacek@gmail.com <br>
-        This site is hosted on Github Pages.</p>
+        This site is open source and hosted on <a href="https://pages.github.com/" style="color:white">Github Pages<a>.</p>
     </footer>
 </body>
 </html>
