@@ -146,9 +146,23 @@ h1 {
   font-size: 28px;
   cursor: pointer;
 }
+/* Skrýt mobilní menu na desktopu */
+.mobile-menu {
+  display: none;
+}
 
+/* Zobrazit desktop menu jen na větších zařízeních */
+.desktop-menu {
+  display: flex;
+}
+
+/* Mobilní styly */
 @media (max-width: 768px) {
-  nav {
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu {
     display: none;
     flex-direction: column;
     background: black;
@@ -157,14 +171,25 @@ h1 {
     right: 20px;
     padding: 10px;
     border: 1px solid white;
+    width: auto;
+    text-align: right;
   }
 
-  nav.open {
+  .mobile-menu.open {
     display: flex;
   }
 
   .menu-toggle {
     display: block;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .social-icons {
+    justify-content: flex-end;
   }
 }
 
@@ -172,46 +197,71 @@ h1 {
 
 
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            // Animace
-            document.querySelector(".hero").classList.add("visible");
-            document.querySelector(".container").classList.add("visible");
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Animace
+    document.querySelector(".hero").classList.add("visible");
+    document.querySelector(".container")?.classList.add("visible");
 
-            // Rozbalovací menu
-            const toggle = document.querySelector(".menu-toggle");
-            const nav = document.querySelector("nav");
-            toggle.addEventListener("click", () => {
-                nav.classList.toggle("open");
-            });
-        });
-    </script>
+    // Rozbalovací menu
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".mobile-menu");
+
+    if (toggle && menu) {
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("open");
+      });
+    }
+  });
+</script>
+
+
 
 </head>
 <body>
     <header>
-    <a href="index.html"><img class="logo" src="img/logo-white.svg"></a>
+        <a href="index.html"><img class="logo" src="img/logo-white.svg" alt="PLACEK Ostrava logo"></a>
 
+        <!-- Tlačítko menu -->
+        <button class="menu-toggle" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
 
-    <div class="right-header">
-        <nav>
+        <!-- Desktop verze navigace -->
+        <div class="right-header desktop-menu">
+            <nav>
             <a class="onestfont" href="aktuality.html">Aktuality</a>
             <a class="onestfont" href="kalendar.html">Kalendář akcí</a>
             <a class="onestfont" href="o-nas.html">O nás</a>
             <a class="onestfont" href="kontakty.html">Kontakty</a>
             <a class="onestfont" href="https://donio.cz/placekostrava" target="_blank">Darujte</a>
-        </nav>
-        <div class="social-icons">
+            </nav>
+            <div class="social-icons">
             <a href="mailto:ostravskyplacek@gmail.com" title="E-mail"><i class="fas fa-envelope"></i></a>
             <a href="https://instagram.com/placek_ostrava" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
             <a href="https://youtube.com/@placek-ostrava" title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
             <a href="https://tiktok.com/@placek_ova" title="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
             <a href="https://www.facebook.com/profile.php?id=61574674575089" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
         </div>
-    </div>
-        <button class="menu-toggle" aria-label="Menu">
-            <i class="fas fa-bars"></i>
-        </button>
+
+        <!-- Mobilní verze menu -->
+        <div class="mobile-menu">
+            <nav>
+            <a class="onestfont" href="aktuality.html">Aktuality</a>
+            <a class="onestfont" href="kalendar.html">Kalendář akcí</a>
+            <a class="onestfont" href="o-nas.html">O nás</a>
+            <a class="onestfont" href="kontakty.html">Kontakty</a>
+            <a class="onestfont" href="https://donio.cz/placekostrava" target="_blank">Darujte</a>
+            </nav>
+            <div class="social-icons">
+            <a href="mailto:ostravskyplacek@gmail.com" title="E-mail"><i class="fas fa-envelope"></i></a>
+            <a href="https://instagram.com/placek_ostrava" title="Instagram" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/@placek-ostrava" title="YouTube" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://tiktok.com/@placek_ova" title="TikTok" target="_blank"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.facebook.com/profile.php?id=61574674575089" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
     </header>
 
 
