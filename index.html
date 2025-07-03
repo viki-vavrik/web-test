@@ -138,6 +138,35 @@ h1 {
     font-size: 28px;
   }
 }
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: black;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    padding: 10px;
+    border: 1px solid white;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
 
 
 
@@ -145,14 +174,24 @@ h1 {
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+            // Animace
             document.querySelector(".hero").classList.add("visible");
             document.querySelector(".container").classList.add("visible");
+
+            // Rozbalovací menu
+            const toggle = document.querySelector(".menu-toggle");
+            const nav = document.querySelector("nav");
+            toggle.addEventListener("click", () => {
+                nav.classList.toggle("open");
+            });
         });
     </script>
+
 </head>
 <body>
     <header>
     <a href="index.html"><img class="logo" src="img/logo-white.svg"></a>
+
 
     <div class="right-header">
         <nav>
@@ -170,6 +209,9 @@ h1 {
             <a href="https://www.facebook.com/profile.php?id=61574674575089" title="Facebook" target="_blank"><i class="fab fa-facebook"></i></a>
         </div>
     </div>
+        <button class="menu-toggle" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
     </header>
 
 
